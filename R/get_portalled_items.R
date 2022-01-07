@@ -22,7 +22,7 @@ get_portalled_items <- function() {
   if (is.null(item_dataframe)) {
           dummy_frame <- file.info("__not_a_real_file__")
           dummy_frame$filename <- NA_character_
-          item_dataframe <- na.omit(dummy_frame)
+          item_dataframe <- stats::na.omit(dummy_frame)
   }
   item_dataframe
 }

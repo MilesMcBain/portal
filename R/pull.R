@@ -8,7 +8,7 @@ pull <- function(object) {
         fs::path_ext_remove(fs::path_file(portal_items$filename))
       portal_items[item_names == as.character(substitute(object)), ]$filename
     } else {
-      first_in <- head(sort(portal_items$ctime), 1)
+      first_in <- utils::head(sort(portal_items$ctime), 1)
       portal_items[portal_items$ctime == first_in, ]$filename
     }
   if (length(item_filename) == 0) stop("Could not find item in the portal.")
