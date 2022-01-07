@@ -1,5 +1,5 @@
 get_pkg_user_dir <- function() {
-  portal_user_dir <- tools::R_user_dir("portal")
+  portal_user_dir <- R_user_dir("portal")
   if (!dir.exists(portal_user_dir)) {
     dir.create(portal_user_dir, recursive = TRUE)
  }

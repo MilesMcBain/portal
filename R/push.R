@@ -36,5 +36,5 @@ function() {
    foo <- mtcars
    push(foo)
    get_portalled_items()  
-   pull(foo)
+   pull()
 }
