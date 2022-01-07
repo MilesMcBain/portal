@@ -15,7 +15,7 @@ pull <- function(object) {
   object_data <- read_item(item_filename)
   object_name <- fs::path_ext_remove(fs::path_file(item_filename))
   assign(object_name, object_data, envir = .GlobalEnv)
-  cat("(0) -> ", object_name)
+  out_message(object_name)
   unlink(item_filename)
 }
 

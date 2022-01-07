@@ -29,11 +29,12 @@ push <- function(
       paste(as.character(object_name), serialiser, sep =".")
     )
   )
-  cat(object_name, " -> (0)")
+  in_message(as.character(object_name))
 }
 
 function() {
    foo <- mtcars
    push(foo)
    get_portalled_items()  
+   pull(foo)
 }
