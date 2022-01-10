@@ -58,6 +58,6 @@ By default datasets are serialised using Rds. If that's too slow `push` takes a 
 
 `push()` uses the name of symbol you passed in to name the file, which in turn informs `pull` what to call the object when it is imported. Weird object names won't work that well. Notably if you use this with the `{magrittr}` pipe you'll have a bad time, since the symbol (and file) will be named `.`.
 
-Similarly pushing unnamed expressions might result in invalid file names and so won't work. For now this might be useful:
+Similarly pushing unnamed expressions might result in invalid file names and so won't work.
 
 I'll probably fix these eventually. Contributions are welcome.
