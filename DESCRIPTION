@@ -1,10 +1,9 @@
 Package: portal
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Move data between your local R sessions 
+Version: 0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Miles", "McBain", , "miles.mcbain@gmail.com", role = c("aut", "cre"))
+Description: A bit of whimsy that saves you creating a temporary file. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
