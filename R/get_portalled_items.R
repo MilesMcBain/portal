@@ -6,6 +6,12 @@ get_pkg_user_dir <- function() {
   portal_user_dir
 }
 
+#' Catalogue all the objects in the abyss.
+#'
+#' Where you need a specfic object, knowing its name is necessary to conjur it.
+#'
+#' Names have power.
+#'
 #' @export
 get_portalled_items <- function() {
   items <- list.files(get_pkg_user_dir(), full.names = TRUE)

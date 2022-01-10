@@ -1,4 +1,9 @@
-
+#' Conjur an object from the ether
+#' 
+#' Oldest objects emerge first.
+#' 
+#' @param object Search the abyss for an object that has this symbol's name. In
+#' the abyss not all searches end.
 #' @export
 pull <- function(object) {
   portal_items <- get_portalled_items()

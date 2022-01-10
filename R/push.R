@@ -1,3 +1,8 @@
+#' Push an object into the ether
+#' 
+#' @param object the object to be thrown into the portal. Beware traveller,
+#'  somewhere in the abyss a file takes the symbol's name.
+#' @param serialiser what kind of file the object is backed by. "rds" (default), "qs", or "parquet"
 #' @export
 push <- function(
   object,
