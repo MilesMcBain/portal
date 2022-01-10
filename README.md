@@ -17,7 +17,10 @@ devtools::install_github("milesmcbain/portal")
 
 ## Usage
 
-You discovered a problem in your pipeline. You you have the data but the code that's blowing up lives in one of your packages. You fire up the package project and prepare to get cracking... but geez woulnd't it be nice if you could just pull that dataset from your pipeline, directly into your package REPL?
+You discovered a problem in your pipeline. You've isolated the data but the code
+that's blowing up lives in one of your packages. You fire up the package project
+and prepare to get cracking... but geez wouldn't it be nice if you could just
+pull that dataset from your pipeline, directly into your package REPL?
 
 I mean reprexes are nice and all... but a dataset that creates the issue is right there...
 
@@ -56,7 +59,10 @@ By default datasets are serialised using Rds. If that's too slow `push` takes a 
 
 ## Problems
 
-`push()` uses the name of symbol you passed in to name the file, which in turn informs `pull` what to call the object when it is imported. Weird object names won't work that well. Notably if you use this with the `{magrittr}` pipe you'll have a bad time, since the symbol (and file) will be named `.`.
+`push()` uses the name of the symbol you passed in to name the file, which in
+turn informs `pull` what to call the object when it is imported. Weird object
+names won't work that well. Notably if you use this with the `{magrittr}` pipe
+you'll have a bad time, since the symbol (and file) will be named `.`.
 
 Similarly pushing unnamed expressions might result in invalid file names and so won't work.
 
