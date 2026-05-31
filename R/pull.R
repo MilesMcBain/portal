@@ -1,7 +1,7 @@
 #' Conjur an object from the ether
-#' 
+#'
 #' Oldest objects emerge first.
-#' 
+#'
 #' @param object Search the abyss for an object that has this symbol's name. In
 #' the abyss not all searches end.
 #' @export
@@ -16,7 +16,9 @@ pull <- function(object) {
       first_in <- utils::head(sort(portal_items$ctime), 1)
       portal_items[portal_items$ctime == first_in, ]$filename
     }
-  if (length(item_filename) == 0) stop("Could not find item in the portal.")
+  if (length(item_filename) == 0) {
+    stop("Could not find item in the portal.")
+  }
   object_data <- read_item(item_filename)
   object_name <- fs::path_ext_remove(fs::path_file(item_filename))
   assign(object_name, object_data, envir = .GlobalEnv)
@@ -29,7 +31,7 @@ read_item <- function(filename) {
   deserialiser <- switch(
     extension,
     "rds" = readRDS,
-    "qs" = qs::qread,
+    "qs" = qs2::qs_read,
     "parquet" = arrow::read_parquet,
     NULL
   )

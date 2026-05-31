@@ -2,7 +2,8 @@ Package: portal
 Title: Move data between your local R sessions 
 Version: 0.0.1
 Authors@R: 
-    person("Miles", "McBain", , "miles.mcbain@gmail.com", role = c("aut", "cre"))
+    c(person("Miles", "McBain", , "miles.mcbain@gmail.com", role = c("aut", "cre")),
+      person("Timothy", "Adams", "tbadams45@gmail.com", role = "ctb"))
 Description: A bit of whimsy that saves you creating a temporary file. 
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -13,6 +14,6 @@ Imports:
     backports,
     fs,
     glue,
-    qs,
+    qs2,
     stats,
     utils
